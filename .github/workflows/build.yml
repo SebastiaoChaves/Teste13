@@ -58,3 +58,6 @@ jobs:
                     push: false
                     build-args: |
                         webgoat_version=${{ env.WEBGOAT_MAVEN_VERSION }} 
+            -   uses: github/codeql-action/init@v1
+                with:
+                    queries: +security-extended
